@@ -1,0 +1,102 @@
+
+<ion-content [fullscreen]="true">
+  <div class="floating-buttons-top">
+    <ion-button
+      *ngFor="let lang of languages"
+      (click)="changeLanguage(lang.code)"
+      class="floating-btn custom-floating-btn"
+      [class.selected]="lang.code === selectedLanguage">
+      <ion-img [src]="lang.icon" class="icon-img"></ion-img>
+    </ion-button>
+  </div>
+
+  
+   @switch (this.themeCode) {
+    @case ('colors') {
+      <div class="buttons-container" >
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(1)">
+          🔴
+        </ion-button>
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(2)">
+          🟡
+        </ion-button>
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(3)">
+          🟢
+        </ion-button>
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(4)">
+          🔵
+        </ion-button>
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(5)">
+          ⚪
+        </ion-button>
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(6)">
+          ⚫
+        </ion-button>
+      </div>
+    }
+
+    @case ('numbers') {
+      <div class="buttons-container">
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(1)">
+          1
+        </ion-button>
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(2)">
+          2
+        </ion-button>
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(3)">
+          3
+        </ion-button>
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(4)">
+          4
+        </ion-button>
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(5)">
+          5
+        </ion-button>
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(6)">
+          6
+        </ion-button>
+      </div>
+    }
+
+    @case ('animals') {
+      <div class="buttons-container">
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(1)">
+          🦁
+        </ion-button>
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(2)">
+          🐮
+        </ion-button>
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(3)">
+          🐷
+        </ion-button>
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(4)">
+          🐭
+        </ion-button>
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(5)">
+          🐻
+        </ion-button>
+        <ion-button expand="block" size="large" class="content-btn" (click)="playSound(6)">
+          🐸
+        </ion-button>
+      </div>
+    }
+   }
+
+
+
+  <div class="floating-buttons-bottom">
+    <ion-button 
+      *ngFor="let theme of themes" 
+      (click)="changeTheme(theme.code)" 
+      class="floating-btn custom-floating-btn"
+      [class.selected]="theme.code === selectedTheme">
+      <ion-img [src]="theme.icon" class="icon-img"></ion-img>
+    </ion-button>
+    <ion-button (click)="cerrarSesion()" class="floating-btn custom-cerrar-btn">
+      <ion-img src="assets/temas/cerrar-sesion.png" class="icon-img"></ion-img>
+    </ion-button>
+  </div>
+
+</ion-content>
+
+    
